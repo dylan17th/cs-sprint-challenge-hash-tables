@@ -1,15 +1,18 @@
-# Your code here
-
-
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    query_cache = {}
+    result = []
+
+    for ele in queries:
+        query_cache[ele] = ele
+
+    for ele in files:
+        new = ele.split("/")
+        if new[-1] in query_cache:
+            result.append(ele)
 
     return result
-
 
 if __name__ == "__main__":
     files = [
