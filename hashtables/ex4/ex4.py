@@ -2,9 +2,16 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    my_hashtable = {}
+    my_negative_arry = []
 
-    return result
+    for ele in a: 
+        my_hashtable[ele] = ele
+
+        if ele is not 0 and -ele in my_hashtable:
+            my_negative_arry.append(abs(ele))
+
+    return my_negative_arry    
 
 
 if __name__ == "__main__":
